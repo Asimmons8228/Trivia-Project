@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Style the quiz container */
+#quiz {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Style the question text */
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the options container */
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style the answer options */
+label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+/* Style the answer options text */
+label:hover {
+    background-color: #e0e0e0;
+}
+
+/* Style the submit button */
+#submit-answer {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+#submit-answer:hover {
+    background-color: #0056b3;
+}
+
+/* Style the results container */
+#results {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Style the difficulty buttons container */
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style the difficulty buttons */
+.difficulty-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: background-color 0.2s;
+}
+
+.difficulty-button.active {
+    background-color: #0056b3;
+}
+/* Style for the active difficulty button */
+.difficulty-button.active {
+    background-color: #007bff; /* Change the background color to blue */
+    color: #fff; /* Change the text color to white */
+    border: 2px solid #007bff; /* Add a blue border */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Style for non-active difficulty buttons (optional) */
+.difficulty-button {
+    background-color: #fff; /* Default background color */
+    color: #333; /* Default text color */
+    border: 2px solid #ccc; /* Default border color */
+    font-weight: normal; /* Default font weight */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s; /* Add smooth transitions */
+}
+
+/* Hover effect for non-active difficulty buttons (optional) */
+.difficulty-button:not(.active):hover {
+    background-color: #f5f5f5; /* Change background color on hover */
+}
